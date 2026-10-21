@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <title>Паметен дом</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добродојдовте во вашиот Паметен дом!</h1>
+    </header>
+    <img src="kukja.jpg" class="kukja_animacija "alt="Куќа(слика)" width="300"; height="300" >
+
+    <nav> Мени
+        <ul>
+        <li><a href="#pocetna">Преглед</a></li>
+        <li><a href="#spalna">Спална</a></li>
+        <li><a href="#dnevna">Дневна</a></li>
+        <li><a href="#kujna">Кујна</a></li>
+        <li><a href="#gradina">Градина</a></li>
+        <li><a href="#notifikacii">Нотификации</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="pocetna">  
+            <h2>Преглед на домот</h2>
+            <p>Паметен дом се состои од неколку простории каде се обезбедени сензори кои овозможуваат пријатна домашна атмосфера.</p>
+            <p>Вашиот дом има <strong>4 простории</strong>.</p>
+            <p>Бројот на сензори во секоја просторија е <strong>3</strong>.</p>
+        </section>
+
+        <section id="spalna">
+
+            <img src="spalna.jpg" class="spalna_tranzicija" alt="Спална соба" height="60" width="60"><h2>Спална соба</h2>
+            
+            <fieldset>
+                <legend>Сензор за осветлување</legend>
+                <label>Интензитет:</label>
+                <select>
+                    <option>Ниско</option>
+                    <option selected>Средно</option>
+                    <option>Високо</option>
+                </select>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="svetlo_vklucen" name="status_svetlo" value="on" checked>
+                <label for="svetlo_vklucen">Вклучен</label>
+                <input type="radio" id="svetlo_isklucen" name="status_svetlo" value="off">
+                <label for="svetlo_isklucen">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija">
+                    <option value="100">100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50" selected>50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за внес на звучен режим</legend>
+                <label for="rezim">Изберете или внесете звучен режим:</label>
+                <input list="opcii" id="rezim" name="rezim" placeholder="Одберете или напишете звучен режим">
+                <datalist id="opcii">
+                    <option value="Бел шум (White Noise)">
+                    <option value="Звуци од дожд">
+                    <option value="Бранови">
+                    <option value="Длабок сон (Тишина)">
+                </datalist>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="rezim_vklucen" name="status_rezim" value="on" checked>
+                <label for="rezim_vklucen">Вклучен</label>
+                <input type="radio" id="rezim_isklucen" name="status_rezim" value="off">
+                <label for="rezim_isklucen">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_rezim">
+                    <option value="100">100% - Полна</option>
+                    <option value="85" selected>85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за температура</legend>
+                <label for="temperatura">Температура во спалната соба:</label>
+                <input type="number" id="temperatura" name="temperatura" value="22" min="-10" max="50"> °C
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="temp_vklucen" name="status_temperatura" value="on" checked>
+                <label for="temp_vklucen">Вклучен</label>
+                <input type="radio" id="temp_isklucen" name="status_temperatura" value="off">
+                <label for="temp_isklucen">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_temperatura">
+                    <option value="100">100% - Полна</option>
+                    <option value="85" selected>85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+                <p><strong>Дозволената температура е од 18°C до 24°C.</strong></p>
+            </fieldset>
+        </section>
+
+        <section id="dnevna">
+            <img src="dnevna.jpg" class="dnevna_tranzicija" alt="Дневна" height="60" width="60"><h2>Дневна соба</h2>
+            
+            <fieldset>
+                <legend>Сензор за пребарување уреди</legend>
+                <label for="prebaraj">Пребарај уреди во дневната соба</label>
+                <input type="search" id="prebaraj" name="prebaraj" placeholder="На пр. телевизор, светло...">
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="prebaruvanje_on" name="status_prebaruvanje" value="on" checked>
+                <label for="prebaruvanje_on">Вклучен</label>
+                <input type="radio" id="prebaruvanje_off" name="status_prebaruvanje" value="off">
+                <label for="prebaruvanje_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_prebaruvanje">
+                    <option value="100" selected>100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за влажност во собата</legend>
+                <label for="vlaznost">Испитај влажност во дневната соба</label>
+                <input type="text" id="vlaznost" name="vlaznost" autocomplete="on" placeholder="Внесете влажност во %">
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="vlaznost_vklucen" name="status_vlaznost" value="on" checked>
+                <label for="vlaznost_vklucen">Вклучен</label>
+                <input type="radio" id="vlaznost_isklucen" name="status_vlaznost" value="off">
+                <label for="vlaznost_isklucen">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_vlaznost">
+                    <option value="100">100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20" selected>20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за регистриран звук</legend>
+                <label for="nivo_zvuk">Регистриран е звук во дневната соба (dB)</label>
+                <input type="number" id="nivo_zvuk" name="nivo_zvuk" value="32" min="0" max="120"> dB
+                <p><strong>Доколку регистрираниот звук во дневната соба е над 50 dB се прикажува предупредување</strong></p>
+                <p>Статус на сензорот</p>
+                <input type="radio" id="zvuk_vklucen" name="status_zvuk" value="on" checked>
+                <label for="zvuk_vklucen">Вклучен</label>
+                <input type="radio" id="zvuk_isklucen" name="status_zvuk" value="off">
+                <label for="zvuk_isklucen">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_zvuk">
+                    <option value="100">100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50" selected>50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+        </section>
+
+        <section id="kujna">
+            <img src="kujna.jpg" class="kujna_tranzicija" alt="Кујна" height="60" width="60"><h2>Кујна</h2>
+            
+            <fieldset>
+                <legend>Сензор за температура на рерна</legend>
+                <label for="temp_rerna">Постави ја температурата на рерната</label>
+                <input type="range" id="temp_rerna" name="temp_rerna" min="50" max="220" step="10" value="180">
+                <p><strong>Температурата на рерната не смее да надминее 220°C</strong></p>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="temprerna_on" name="status_rerna" value="on" checked>
+                <label for="temprerna_on">Вклучен</label>
+                <input type="radio" id="temprerna_off" name="status_rerna" value="off">
+                <label for="temprerna_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_rerna">
+                    <option value="100">100% - Полна</option>
+                    <option value="85" selected>85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за филтер за вода</legend>
+                <label for="filter">Измери ја тековната исполнетост на филтерот за вода</label>
+                <progress id="filter" value="70" max="100"></progress> 70%
+                <p><strong>Филтерот за вода треба да се промени доколку неговата исполнетост е &lt 10%</strong></p>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="filter_on" name="status_filter" value="on" checked>
+                <label for="filter_on">Вклучен</label>
+                <input type="radio" id="filter_off" name="status_filter" value="off">
+                <label for="filter_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_filter">
+                    <option value="100">100% - Полна</option>
+                    <option value="85" selected>85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за чад во кујната</legend>
+                <label for="chad">Измерена концентрација на чад (пареа) во кујната</label>
+                <meter id="chad" value="20" max="100"></meter> 20%
+                <p><strong>Доколку измерената концентрација на чад во кујната е 50% се прикажува предупредување</strong></p>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="chad_on" name="status_chad" value="on" checked>
+                <label for="chad_on">Вклучен</label>
+                <input type="radio" id="chad_off" name="status_chad" value="off">
+                <label for="chad_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_chad">
+                    <option value="100">100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20" selected>20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>          
+        </section>
+
+        <section id="gradina">
+            <img src="gradina.jpg" class="gradina_tranzicija" alt="Градина" height="60" width="60"><h2>Градина</h2>
+            
+            <fieldset>
+                <legend>Сензор за безбедносен систем на порта</legend>
+                <label for="porta">Моментална состојба на портата од градината:</label><br>
+                <input type="radio" id="porta_zaklucena" name="porta" value="zaklucena" checked>
+                <label for="porta_zaklucena">Заклучена</label><br>
+                <input type="radio" id="porta_otvorena" name="porta" value="otvorena">
+                <label for="porta_otvorena">Отворена</label><br>
+                <input type="radio" id="porta_otklucena" name="porta" value="otklucena">
+                <label for="porta_otklucena">Затворена (но отклучена)</label>
+                <p><strong>Доколку портата е отворена се покажува известување</strong></p>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="senzorporta_on" name="senzorporta" value="on" checked>
+                <label for="senzorporta_on">Вклучен</label>
+                <input type="radio" id="senzorporta_off" name="senzorporta" value="off">
+                <label for="senzorporta_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_porta">
+                    <option value="100">100% - Полна</option>
+                    <option value="85" selected>85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10">10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за мерење на влажност на почвата</legend>
+                <label for="pocva">Моментална влажност на почвата (%):</label>
+                <meter id="pocva" value="15" max="100"></meter> 15%
+                <p><strong>Доколку измерената влажност на почвата е над 80% се прикажува предупредување</strong></p>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="pocva_on" name="senzorpocva" value="on" checked>
+                <label for="pocva_on">Вклучен</label>
+                <input type="radio" id="pocva_off" name="senzorpocva" value="off">
+                <label for="pocva_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_pocva">
+                    <option value="100">100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10" selected>10% - Критична</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Сензор за загаденост на воздух</legend>
+                <label for="vozduh">Загаденост на воздухот во градината:</label>
+                <progress id="vozduh" value="15" max="100"></progress> 15%
+                <p><strong>Доколку измерената загаденост на воздухот е над 60% се прикажува предупредување</strong></p>
+                <p>Статус на сензорот:</p>
+                <input type="radio" id="gradina_on" name="status_gradina" value="on" checked>
+                <label for="gradina_on">Вклучен</label>
+                <input type="radio" id="gradina_off" name="status_gradina" value="off">
+                <label for="gradina_off">Исклучен</label>
+                <p>Ниво на батерија:</p>
+                <select name="baterija_gradina">
+                    <option value="100">100% - Полна</option>
+                    <option value="85">85% - Добра</option>
+                    <option value="50">50% - Средна</option>
+                    <option value="20">20% - Ниска</option>
+                    <option value="10" selected>10% - Критична</option>
+                </select>
+            </fieldset>
+        </section>
+
+        <section id="notifikacii">
+            <img src="bell.jpg" class="dzvono_tranzicija" alt="ѕвонче" height="100" width="100"> <h2>Нотификации</h2>
+            
+            <details>
+                <summary>Гласен звук во Дневна соба</summary>
+                <p>Се регистрираше гласен звук во дневната соба над 50 dB. Проверете ја собата.</p>
+            </details>
+
+            <details>
+                <summary>Отворена капија во Градина</summary>
+                <p>Капијата е оставена отворена повеќе од 30 минути.</p>
+            </details>
+
+            <details>
+                <summary>Висока температура во спалната соба</summary>
+                <p>Температурата во спалната соба е над дозволената граница од 24°C. Проверете ја собната температура.</p>
+            </details>
+
+            <details>
+                <summary>Филтерот за вода треба да се замени</summary>
+                <p>Преостанатиот капацитет на филтерот за вода е под 10%. Заменете го филтерот.</p>
+            </details>
+
+            <details>
+                <summary>Зголемена концентрација на чад во кујната</summary>
+                <p>Измерената концентрација на чад во кујната ја достигнала или надминала границата од 50%. Проверете ја состојбата во кујната.</p>
+            </details>
+
+            <details>
+                <summary>Преголема влажност на почвата во градината</summary>
+                <p>Влажноста на почвата е над 80%. Проверете дали растенијата добиваат премногу вода.</p>
+            </details>
+
+            <details>
+                <summary>Зголемена загаденост на воздухот во градината</summary>
+                <p>Измерената загаденост на воздухот е над 60%. Проверете ги условите во градината.</p>
+            </details>
+
+            <details>
+                <summary>Известување: Портата во градината е отворена</summary>
+                <p>Портата во градината е оставена отворена. Затворете ја и заклучете.</p>
+            </details>
+        </section>
+    </main>
+</body>
+</html>
