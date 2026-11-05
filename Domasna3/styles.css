@@ -1,0 +1,108 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #e10600;
+    font-size: 45px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 4px solid #e10600;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #f5f5f5;
+    margin-top: 40px;
+    font-size: 26px;
+}
+
+
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #2b2b2b;
+    box-shadow: 0px 0px 10px black;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #e10600;
+    color: white;
+    font-size: 17px;
+}
+
+td {
+    background-color: #2b2b2b;
+    color: #dddddd;
+}
+
+
+tr:nth-child(even) td {
+    background-color: #353535;
+}
+
+
+tr:hover td {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+
+#raceTable tr:nth-child(2) td {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #e10600;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff2a1f;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+#winner {
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffd700, #ff9900);
+    color: #171717;
+    border-radius: 20px;
+    display: none;
+    max-width: 600px;
+    animation: winnerEffect 1s ease-in-out;
+}
+
+
