@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерија-Travelio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&family=Lobster&display=swap&subset=cyrillic">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Travelio</a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinations.html">Дестинации</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html ">Галерија</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+        <li class="nav-item"><a class="nav-link" href="anketa.html">Анкета</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center naslov">
+    <h1>Travel the world</h1>
+    <p>Најди ја твојата дестинација од соништата</p>
+  </div> 
+
+
+  <main class="container my-5">
+  <h2 class="text-center mb-4">Избери град</h2>
+  <ul id="kopcinja" class="nav nav-pills justify-content-center meni-gradovi mb-5"></ul>
+  <div id="galerija"></div>
+</main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    © 2026 Travelio – Мила Неделкова
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

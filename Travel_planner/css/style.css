@@ -1,0 +1,193 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #b0c3d6;
+}
+
+.navbar {
+    background-color: #263f63 !important;
+}
+
+
+footer {
+    background-color: #263f63 !important;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f6fa;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 1.8rem;
+  
+}
+
+.naslov {
+  background-color: #112752 !important;
+  color: white;
+  margin-bottom: 0;
+}
+.bojaheader{
+  
+  background-color: #112752;
+}
+
+.karticka-grad {
+
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+
+}
+
+.karticka-grad:hover {
+  transform: translateY(-6px);
+}
+
+.karticka-grad img {
+  height: 180px;
+  object-fit: cover;
+}
+.slika-galerija {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.slika-galerija:hover {
+  transform: scale(1.05);
+}
+.meni-gradovi {
+  background-color: white;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+}
+
+.meni-gradovi .nav-link {
+  color: #1e3c72;
+  border-radius: 50px;
+  padding: 8px 25px;
+  font-weight: bold;
+}
+
+.meni-gradovi .nav-link:hover {
+  background-color: #e8eef7;
+}
+
+.meni-gradovi .nav-link.active {
+  background-color: #1e3c72;
+  color: white;
+}
+
+
+
+.survey-form {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* NASLOVI NA SEKCIITE */
+.survey-form h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    color: #1e3c72;
+    border-left: 5px solid #1e3c72;
+    padding: 10px 15px;
+    background-color: #e8eef7;
+    border-radius: 5px;
+}
+
+/* LABELS */
+.survey-form .form-label {
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+
+.survey-form .form-control,
+.survey-form .form-select {
+    border: 1px solid #c5d2e2;
+    border-radius: 8px;
+    padding: 11px;
+    background-color: #f8fafd;
+}
+
+.survey-form .form-control:focus,
+.survey-form .form-select:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.15);
+    background-color: white;
+}
+
+
+.survey-form .form-check {
+    margin-bottom: 9px;
+    padding-left: 30px;
+}
+
+.survey-form .form-check-input {
+    cursor: pointer;
+    border-color: #9aabc0;
+}
+
+.survey-form .form-check-input:checked {
+    background-color: #1e3c72;
+    border-color: #1e3c72;
+}
+
+.survey-form .form-check-label {
+    cursor: pointer;
+    color: #53647a;
+}
+
+
+.survey-form textarea {
+    resize: vertical;
+}
+
+
+.survey-form button[type="submit"] {
+    background-color: #1e3c72;
+    border: none;
+    padding: 13px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.survey-form button[type="submit"]:hover {
+    background-color: #112752;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+    .survey-page .naslov {
+        padding: 40px 15px;
+    }
+
+    .survey-page .naslov h1 {
+        font-size: 35px;
+    }
+
+    .survey-form {
+        padding: 20px;
+        margin: 20px 12px;
+    }
+}
+

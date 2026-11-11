@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&family=Lobster&display=swap&subset=cyrillic">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="survey-page">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Travelio</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+            <li class="nav-item"><a class="nav-link active" href="destinations.html" >Дестинации</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Галерија</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+            <li class="nav-item"><a class="nav-link active" href="anketa.html">Анкета</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="jumbotron text-center naslov">
+    <h1>Анкета</h1>
+    <p>Сподели го твоето мислење за Travelio</p>
+    </div>
+    <main class="container my-5">
+<form id="anketa" class="survey-form">
+<h3 class="text mb-4">1. Основни информации</h3>
+
+<div class="d-flex flex-column gap-3">
+
+    <div>
+        <label for="imeprez" class="form-label">Име и презиме</label>
+        <input type="text" class="form-control" id="imeprez"
+               placeholder="Внесете име и презиме" required>
+    </div>
+
+    <div>
+        <label for="vozrast" class="form-label">Возраст</label>
+        <input type="number" class="form-control" id="vozrast"
+               placeholder="Внесете возраст" min="1" required>
+    </div>
+
+    <div>
+        <label for="grad" class="form-label">Од каде нè посетувате?</label>
+        <input type="text" class="form-control" id="grad"
+               placeholder="Град / Држава" required>
+    </div>
+
+    <div>
+        <label class="form-label">Колку често патувате?</label>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="patuvanje" id="cesto" value="Често" required>
+            <label class="form-check-label" for="cesto">Често</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="patuvanje" id="nekolku" value="Неколку пати годишно">
+            <label class="form-check-label" for="nekolku">
+                Неколку пати годишно
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="patuvanje" id="ednas" value="Еднаш годишно">
+            <label class="form-check-label" for="ednas">
+                Еднаш годишно
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="patuvanje" id="retko" value="Ретко">
+            <label class="form-check-label" for="retko">Ретко</label>
+        </div>
+    </div>
+
+</div>
+
+<h3 class="text mb-4 mt-5">2. Вашето искуство со веб-страницата</h3>
+
+<div class="d-flex flex-column gap-3">
+
+    <div>
+        <label class="form-label">Како дознавте за нашиот веб-сајт?</label>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="doznal"  id="social"  value="Социјални мрежи" required>
+            <label class="form-check-label" for="social">Социјални мрежи</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="doznal" id="prijatel" value="Препорака од пријател">
+            <label class="form-check-label" for="prijatel">Препорака од пријател</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="doznal" id="google"  value="Google пребарување">
+            <label class="form-check-label" for="google">Google пребарување</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="doznal" id="drugo"  value="Друго">
+            <label class="form-check-label" for="drugo">Друго</label>
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label">Како би го оцениле изгледот на веб-страницата?</label>
+
+        <select class="form-select" id="ocena" required>
+            <option value="">Изберете оценка</option>
+            <option value="5">Одличен</option>
+            <option value="4">Многу добар</option>
+            <option value="3">Добар</option>
+            <option value="2">Задоволителен</option>
+            <option value="1">Лош</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="form-label">Кои функционалности најмногу ви се допаѓаат?</label>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="destinacii">
+            <label class="form-check-label" for="destinacii">Преглед на дестинации</label>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="galerija">
+            <label class="form-check-label" for="galerija">Галерија со фотографии</label>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="budzet">
+            <label class="form-check-label" for="budzet">Филтрирање според буџет</label>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="trosoci">
+            <label class="form-check-label" for="trosoci">Пресметка на патни трошоци</label>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="blog">
+            <label class="form-check-label" for="blog">Блогови и туристички водичи</label>
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label">Дали лесно ги пронајдовте потребните информации?</label>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="informacii" id="da">
+            <label class="form-check-label" for="da">Да</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="informacii" id="delumno">
+            <label class="form-check-label" for="delumno">Делумно</label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="informacii" id="ne">
+            <label class="form-check-label" for="ne">Не</label>
+        </div>
+    </div>
+
+</div>
+
+
+<h3 class="text mb-4 mt-5">3. Вашите предлози</h3>
+
+<div class="d-flex flex-column gap-3">
+
+    <div>
+        <label for="destinacija" class="form-label">
+            Која дестинација би сакале да ја додадеме?
+        </label>
+        <input type="text" class="form-control" id="destinacija"
+               placeholder="На пример: Барселона, Рим...">
+    </div>
+
+    <div>
+        <label for="mislenje" class="form-label">
+            Што би сакале да подобриме на веб-страницата?
+        </label>
+        <textarea class="form-control" id="mislenje" rows="4"
+                  placeholder="Напишете го вашето мислење..."></textarea>
+    </div>
+
+    <div>
+        <label class="form-label">
+            Дали би им го препорачале Travel Planner на вашите пријатели?
+        </label>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="preporaka" id="preporakaDa" value="Да">
+            <label class="form-check-label" for="preporakaDa">
+                Да, дефинитивно!
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="preporaka" id="preporakaMozebi" value="Можеби">
+            <label class="form-check-label" for="preporakaMozebi">
+                Можеби
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input type="radio" class="form-check-input"
+                   name="preporaka" id="preporakaNe" value="Не">
+            <label class="form-check-label" for="preporakaNe">
+                Не
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <label for="email" class="form-label">
+            Е-mail адреса (опционално)
+        </label>
+        <input type="email" class="form-control" id="email"
+               placeholder="example@gmail.com">
+    </div>
+</div>
+
+    <button type="submit" class="btn btn-primary mt-3">
+        Испрати анкета
+    </button>
+</form>
+
+    <p id="poraka" class="mt-3"></p>
+
+  </main>
+<script src="anketa.js"></script>
+</body>
+</html>

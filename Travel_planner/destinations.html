@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дестинации - Travelio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&family=Lobster&display=swap&subset=cyrillic">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Travelio</a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Почетна</a></li>
+        <li class="nav-item"><a class="nav-link active" href="destinations.html active">Дестинации</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Галерија</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+        <li class="nav-item"><a class="nav-link" href="anketa.html">Анкета</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center naslov">
+    <h1>Дестинации</h1>
+    <p>Додај, бриши и истражувај</p>
+  </div>
+
+  <main class="container my-5">
+
+    
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bojaheader text-white">Додади нова дестинација</div>
+      <div class="card-body">
+        <form id="forma">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Град *</label>
+              <input type="text" id="ime" class="form-control">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Држава *</label>
+              <input type="text" id="drzava" class="form-control">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Буџет (€)</label>
+              <input type="number" id="budzet" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Категорија</label>
+              <select id="kategorija" class="form-control">
+                <option>култура</option>
+                <option>плажа</option>
+                <option>авантура</option>
+                <option>природа</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Опис</label>
+              <input type="text" id="opis" class="form-control">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Слика</label>
+              <input type="text" id="slika" class="form-control">
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-success" onclick="dodajGrad()">Додади</button>
+        </form>
+      </div>
+      <div class="card-footer text-muted">Сите полиња со * се задолжителни</div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-primary text-white">Филтрирај дестинации</div>
+      <div class="card-body">
+        <div class="form-row align-items-end">
+          <div class="form-group col-md-4">
+            <label>Категорија</label>
+            <select id="filterKategorija" class="form-control">
+              <option>сите</option>
+              <option>култура</option>
+              <option>плажа</option>
+              <option>авантура</option>
+              <option>природа</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Максимален буџет (€)</label>
+            <input type="number" id="filterBudzet" class="form-control" placeholder="на пр. 800">
+          </div>
+          <div class="form-group col-md-4">
+            <button type="button" class="btn btn-primary" onclick="filtriraj()">Филтрирај</button>
+            <button type="button" class="btn btn-outline-secondary" onclick="resetirajFilter()">Ресетирај</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="card shadow-sm mb-5">
+      <div class="card-header bg-warning text-dark">Пресметај патни трошоци</div>
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Дестинација</label>
+            <select id="trosokGrad" class="form-control"></select>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Превоз по човек (€)</label>
+            <input type="number" id="prevoz" class="form-control" placeholder="на пр. 200">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Број на ноќи</label>
+            <input type="number" id="nokji" class="form-control" placeholder="на пр. 4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>Сместување на ноќ (€)</label>
+            <input type="number" id="smestuvanje" class="form-control" placeholder="на пр. 50">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Храна на ден (€)</label>
+            <input type="number" id="hrana" class="form-control" placeholder="на пр. 30">
+          </div>
+          <div class="form-group col-md-4">
+            <label>Број на луѓе</label>
+            <input type="number" id="lugje" class="form-control" value="1">
+          </div>
+        </div>
+        <button type="button" class="btn btn-warning" onclick="presmetaj()">Пресметај</button>
+        <div id="rezultat" class="mt-3"></div>
+      </div>
+    </div>
+
+  
+    <h2 class="mb-4">Сите дестинации</h2>
+    <div class="row" id="gradovi"></div>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    © 2026 Travelio – Мила Неделкова
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
