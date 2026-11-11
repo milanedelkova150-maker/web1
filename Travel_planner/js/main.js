@@ -6,7 +6,7 @@ const pocetniGradovi = [
   { ime: "Дубровник", drzava: "Хрватска", slika: "images/dubrovnik.jpg", opis: "Ѕидини над Јадранското Море.", budzet: 750, kategorija: "плажа" },
   { ime: "Токио", drzava: "Јапонија", slika: "images/tokio.jpg", opis: "Спој на традиција и иднина.", budzet: 2000, kategorija: "авантура" },
   { ime: "Швајцарски Алпи", drzava: "Швајцарија", slika: "images/alpi.jpg", opis: "Планини, езера и скијање.", budzet: 1500, kategorija: "природа" },
-  { ime: "Истанбул", drzava: "Турција", slika: "images/istanbul.jpg", opis: "Град на два континента.", budzet: 500, kategorija: "култура" },
+  { ime: "Истанбул", drzava: "Турција", slika: "images/istanbul1.jpg", opis: "Град на два континента.", budzet: 500, kategorija: "култура" },
   { ime: "Барселона", drzava: "Шпанија", slika: "images/barcelona.jpg", opis: "Спој на културата и забавата.", budzet: 1000, kategorija: "култура" }
 ];
 
